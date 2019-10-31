@@ -17,8 +17,9 @@ echo $date=$_POST['date'];
 echo $email=$_POST['email'];
 
 // insert into user () values();
-$dsn="mysql:host=localhost;charset=utf8;dbname=mydb";
-$pdo=new PDO($dsn,'root','1740');
+include "base.php";
+// $dsn="mysql:host=localhost;charset=utf8;dbname=mydb";
+// $pdo=new PDO($dsn,'root','1740');
 
 $sql="insert into user (`acc`,`pw`,`name`,`addr`,`tel`,`birthay`,`email`) values
 ('$acc','$pw','$name','$addr','$tel','$date','$email')";

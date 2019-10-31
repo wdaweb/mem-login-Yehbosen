@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!empty($_SESSION['login'])){
+  header("location:member_center.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +18,9 @@
 <?php
 if(!empty($_GET['s'])){
   echo "註冊成功,請輸入帳密登入";
+}
+if(!empty($_GET['err'])){
+  echo "<h2>帳號或密碼錯誤</h2>";
 }
 ?>
   <h1>會員登入</h1>
