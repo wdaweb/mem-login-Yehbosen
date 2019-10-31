@@ -1,7 +1,7 @@
 <?php 
     include "base.php";
 
-    if(empty($_SESSION['login'])){
+    if(empty($_COOKIE['login'])){
       exit();
     }
 ?>
@@ -27,7 +27,7 @@
         // $dsn="mysql:host=localhost;charset=utf8;dbname=mydb";
         // $pdo=new PDO($dsn,'root','1740');         
 
-        $sql="select * from user where id='".$_SESSION['id']."'";
+        $sql="select * from user where id='".$_COOKIE['id']."'";
         $user=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
         // print_r($user);
       ?>

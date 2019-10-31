@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!empty($_SESSION['login'])){
+if(!empty($_COOKIE['login'])){
   header("location:member_center.php");
 }
 ?>
