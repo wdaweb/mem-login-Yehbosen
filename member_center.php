@@ -29,6 +29,7 @@
 </head>
 <body>
   <div class="member">
+  <a href="admin.php">會員列表</a>
     <div class="wellcome">
       HI! 歡迎光臨!以下是你的個人資料:
       <a href="logout.php">登出</a>

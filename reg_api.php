@@ -22,19 +22,19 @@ echo $email=$_POST['email'];
 // $dsn="mysql:host=localhost;charset=utf8;dbname=mydb";
 // $pdo=new PDO($dsn,'root','1740');
 
-$sql="insert into user (`acc`,`pw`,`name`,`addr`,`tel`,`birthay`,`email`) values
+$sql="insert into user (`acc`,`pw`,`name`,`addr`,`tel`,`birthday`,`email`) values
 ('$acc','$pw','$name','$addr','$tel','$date','$email')";
 echo "sql語法是:".$sql;
 // echo $pdo->query($sql);
 
 // $pdo->exec($sql) 用在不需要回傳資料的場景 del,update,insert
-if($pdo->exec($sql)){
-    // echo "新增資料成功";
-    header("location:index.php?s=1");
-}else{
-    // "新增失敗,請洽資料庫管理人員";
-    header("location:reg.php?s=2");
-}
+ if($pdo->exec($sql)){
+     // echo "新增資料成功";
+     header("location:index.php?s=1");
+ }else{
+     // "新增失敗,請洽資料庫管理人員";
+     header("location:reg.php?s=2");
+ }
 
 
 ?>
