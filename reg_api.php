@@ -8,6 +8,7 @@
  * 5.執行資料庫連線並送出SQL語法
  * 6.判斷SQL語法是否執行成功，執行下一步
  ***************************************************/
+include "base.php";
 echo $acc=$_POST['acc'];
 echo $pw=$_POST['pw'];
 echo $name=$_POST['name'];
@@ -17,7 +18,7 @@ echo $date=$_POST['date'];
 echo $email=$_POST['email'];
 
 // insert into user () values();
-include "base.php";
+
 // $dsn="mysql:host=localhost;charset=utf8;dbname=mydb";
 // $pdo=new PDO($dsn,'root','1740');
 
